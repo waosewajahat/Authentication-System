@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .cover-container {
+            max-width: 42em;
+            padding: 15px;
+            margin: auto;
+        }
+        .cover {
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .cover h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        .cover p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body class="text-center">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        <main class="cover">
+            <h1>Welcome to Home Page</h1>
+            <p>You've succesfully logged in!</p>
+            <!-- Logout Button -->
+            <form method="POST" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Logout</button>
+            </form>
+            <p></p>
+            <P class="lead"> Created by Wajahat Ali</P>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
